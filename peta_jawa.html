@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_93e897929adce30f4b7d6cfa32445079 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; bottom: 50px; right: 50px; border:2px solid grey; 
+                z-index:9999; font-size:14px; background-color: white; padding: 10px;
+                opacity: 0.8; border-radius: 6px;">
+        <b>LEGENDA</b><br>
+        <i class="fa fa-circle" style="color:blue"></i> Kawasan Industri<br>
+        <i class="fa fa-circle" style="color:red"></i> PLTU<br>
+        <i class="fa fa-circle-o" style="color:blue"></i> Radius 40 km
+    </div>
+    
+    
+            <div class="folium-map" id="map_93e897929adce30f4b7d6cfa32445079" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_93e897929adce30f4b7d6cfa32445079 = L.map(
+                "map_93e897929adce30f4b7d6cfa32445079",
+                {
+                    center: [-6.5, 107.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "maxBounds": null,
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f2cbe7d5459326c0f861932c8e6c5b8e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f2cbe7d5459326c0f861932c8e6c5b8e.addTo(map_93e897929adce30f4b7d6cfa32445079);
+        
+    
+            var marker_c10e35918d34d88637f55b9cbdba2b53 = L.marker(
+                [-6.0156, 106.0559],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(map_93e897929adce30f4b7d6cfa32445079);
+        
+    
+            var icon_265480cc053cc210980525f533432ba1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_c10e35918d34d88637f55b9cbdba2b53.setIcon(icon_265480cc053cc210980525f533432ba1);
+        
+    
+        var popup_9f4bd0b4e8696422a53a9c458fe42f35 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_533ce91f1da80e39332b190166c18e1a = $(`<div id="html_533ce91f1da80e39332b190166c18e1a" style="width: 100.0%; height: 100.0%;"><b>Cilegon-Tangerang</b><br><a href='peta_Cilegon-Tangerang.html' target='_blank'>Lihat Peta Detail</a></div>`)[0];
+                popup_9f4bd0b4e8696422a53a9c458fe42f35.setContent(html_533ce91f1da80e39332b190166c18e1a);
+            
+        
+
+        marker_c10e35918d34d88637f55b9cbdba2b53.bindPopup(popup_9f4bd0b4e8696422a53a9c458fe42f35)
+        ;
+
+        
+    
+    
+            var marker_95f89693e5f10365c3df4eb82c8d144d = L.marker(
+                [-6.2883, 107.1196],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(map_93e897929adce30f4b7d6cfa32445079);
+        
+    
+            var icon_7892035eab5ec6ab8140b9b60d78d600 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_95f89693e5f10365c3df4eb82c8d144d.setIcon(icon_7892035eab5ec6ab8140b9b60d78d600);
+        
+    
+        var popup_28519aae13aec1de3adb01d8964d6922 = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_240409c5a111fbb94474cabb451e9cf1 = $(`<div id="html_240409c5a111fbb94474cabb451e9cf1" style="width: 100.0%; height: 100.0%;"><b>Bekasi-Karawang</b><br><a href='peta_Bekasi-Karawang.html' target='_blank'>Lihat Peta Detail</a></div>`)[0];
+                popup_28519aae13aec1de3adb01d8964d6922.setContent(html_240409c5a111fbb94474cabb451e9cf1);
+            
+        
+
+        marker_95f89693e5f10365c3df4eb82c8d144d.bindPopup(popup_28519aae13aec1de3adb01d8964d6922)
+        ;
+
+        
+    
+    
+            var marker_8465580bac24d8cf4aac7febb5a4bcf4 = L.marker(
+                [-7.0051, 110.4381],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(map_93e897929adce30f4b7d6cfa32445079);
+        
+    
+            var icon_ed88c53a3a6cc1b53332e0b8d9a1d23f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_8465580bac24d8cf4aac7febb5a4bcf4.setIcon(icon_ed88c53a3a6cc1b53332e0b8d9a1d23f);
+        
+    
+        var popup_e81bbe731ac50bb4b666d7eb6f99a9bf = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_36842fee8c299ed0990983d72d68f0b3 = $(`<div id="html_36842fee8c299ed0990983d72d68f0b3" style="width: 100.0%; height: 100.0%;"><b>Semarang</b><br><a href='peta_Semarang.html' target='_blank'>Lihat Peta Detail</a></div>`)[0];
+                popup_e81bbe731ac50bb4b666d7eb6f99a9bf.setContent(html_36842fee8c299ed0990983d72d68f0b3);
+            
+        
+
+        marker_8465580bac24d8cf4aac7febb5a4bcf4.bindPopup(popup_e81bbe731ac50bb4b666d7eb6f99a9bf)
+        ;
+
+        
+    
+    
+            var marker_04b05f0b5366259ffed91e26f03f0801 = L.marker(
+                [-7.3457, 112.7158],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(map_93e897929adce30f4b7d6cfa32445079);
+        
+    
+            var icon_99c22e3fea236da6a30e8197ac941e6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_04b05f0b5366259ffed91e26f03f0801.setIcon(icon_99c22e3fea236da6a30e8197ac941e6f);
+        
+    
+        var popup_e2a75b26e647efc099ae9673bc0ba0bc = L.popup({
+  "maxWidth": 300,
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_dccc4d8da235d31780f7c09db98b9dce = $(`<div id="html_dccc4d8da235d31780f7c09db98b9dce" style="width: 100.0%; height: 100.0%;"><b>Sidoarjo</b><br><a href='peta_Sidoarjo.html' target='_blank'>Lihat Peta Detail</a></div>`)[0];
+                popup_e2a75b26e647efc099ae9673bc0ba0bc.setContent(html_dccc4d8da235d31780f7c09db98b9dce);
+            
+        
+
+        marker_04b05f0b5366259ffed91e26f03f0801.bindPopup(popup_e2a75b26e647efc099ae9673bc0ba0bc)
+        ;
+
+        
+    
+</script>
+</html>
